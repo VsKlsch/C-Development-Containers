@@ -1,4 +1,4 @@
- # Fedora + GRPC Development Container
+ # Fedora + VCPKG Development Container
 Container contains standart C++ compiler and installed vcpkg for future development.
 
 ## Using
