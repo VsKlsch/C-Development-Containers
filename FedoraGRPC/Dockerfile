@@ -1,5 +1,11 @@
 FROM fedora:41
 
+ENV WORK_USERNAME Developer
+ENV WORK_USERPASS DeveloperPassword
+ENV GRPC_RELEASE_TAG v1.65.0
+ENV GRPC_INSTALL_DIR /var/local/git/grpc/InstalledGRPC
+ENV GRPC_INCLUDE_DIR ${GRPC_INSTALL_DIR}/include
+
 RUN dnf update -y && dnf install -y \
     autoconf \
     automake \
@@ -13,9 +19,6 @@ RUN dnf update -y && dnf install -y \
     unzip  \
     sudo
 
-ENV GRPC_RELEASE_TAG v1.65.0
-ENV GRPC_INSTALL_DIR /var/local/git/grpc/InstalledGRPC
-ENV GRPC_INCLUDE_DIR ${GRPC_INSTALL_DIR}/include
 
 ENV gRPC_DIR ${GRPC_INSTALL_DIR}/lib/cmake/grpc
 ENV absl_DIR ${GRPC_INSTALL_DIR}/lib64/cmake/absl
@@ -41,9 +44,6 @@ RUN echo "-- Build GRPC With submodules and Install" && \
     popd
 
 RUN echo "-- GRPC and third-party install to $GRPC_INSTALL_DIR"
-
-ENV WORK_USERNAME Developer
-ENV WORK_USERPASS DeveloperPassword
 
 RUN useradd -ms /bin/bash ${WORK_USERNAME}
 
