@@ -11,5 +11,5 @@ Container contains standart C++ compiler and installed vcpkg for future developm
 ## Environment variables
 | Name | Description | Standart Value |
 |------|-------------|----------------|
-| WORK_USERNAME | Non root user name for regular container using | Developer |
-| WORK_USERPASS | Non root password | DeveloperPassword |
+| WORK_USERNAME | Non root user name for regular container using | developer |
+| WORK_USERPASS | Non root password | developer |
