@@ -5,3 +5,4 @@ My own repo with Development Containers for C++ that can be run with Docker or P
 | Contaner name | Description | Link |
 |---------------|-------------|------|
 | FedoraGRPC | Container with fedora 41 and GRPC | [Link](/FedoraGRPC) |
+| FedoraVCPKG | Container with fedora 41 and VCPKG | [Link](/FedoraVCPKG) |
